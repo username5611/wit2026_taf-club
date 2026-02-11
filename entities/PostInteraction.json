@@ -1,0 +1,42 @@
+{
+  "name": "MoodEntry",
+  "type": "object",
+  "properties": {
+    "mood": {
+      "type": "string",
+      "enum": [
+        "amazing",
+        "good",
+        "okay",
+        "low",
+        "rough"
+      ],
+      "description": "The mood level for this entry"
+    },
+    "mood_score": {
+      "type": "number",
+      "description": "Numeric score 1-5 for charting"
+    },
+    "note": {
+      "type": "string",
+      "description": "Optional note about the mood"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Tags like sleep, exercise, social, work, etc."
+    },
+    "entry_date": {
+      "type": "string",
+      "format": "date",
+      "description": "The date of this mood entry"
+    }
+  },
+  "required": [
+    "mood",
+    "mood_score",
+    "entry_date"
+  ]
+}

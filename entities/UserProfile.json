@@ -1,0 +1,36 @@
+{
+  "name": "UserProfile",
+  "type": "object",
+  "properties": {
+    "display_name": {
+      "type": "string",
+      "description": "Public display name"
+    },
+    "bio": {
+      "type": "string",
+      "description": "Short bio about yourself"
+    },
+    "interests": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Areas of interest for matching"
+    },
+    "support_preferences": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "What kind of support they're looking for"
+    },
+    "is_visible": {
+      "type": "boolean",
+      "default": true,
+      "description": "Whether profile is visible to others"
+    }
+  },
+  "required": [
+    "display_name"
+  ]
+}

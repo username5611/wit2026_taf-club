@@ -1,0 +1,43 @@
+{
+  "name": "CommunityPost",
+  "type": "object",
+  "properties": {
+    "content": {
+      "type": "string",
+      "description": "The post content"
+    },
+    "mood": {
+      "type": "string",
+      "enum": [
+        "celebrating",
+        "struggling",
+        "reflecting",
+        "grateful",
+        "seeking_support"
+      ],
+      "description": "Mood/category of the post"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Tags for the post"
+    },
+    "likes_count": {
+      "type": "number",
+      "default": 0
+    },
+    "comments_count": {
+      "type": "number",
+      "default": 0
+    },
+    "author_display_name": {
+      "type": "string",
+      "description": "Display name of the author"
+    }
+  },
+  "required": [
+    "content"
+  ]
+}

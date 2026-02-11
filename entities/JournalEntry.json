@@ -1,0 +1,41 @@
+{
+  "name": "JournalEntry",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Title of the journal entry"
+    },
+    "content": {
+      "type": "string",
+      "description": "The journal content"
+    },
+    "mood": {
+      "type": "string",
+      "enum": [
+        "amazing",
+        "good",
+        "okay",
+        "low",
+        "rough"
+      ],
+      "description": "Mood associated with this entry"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Tags for the entry"
+    },
+    "is_favorite": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether this entry is favorited"
+    }
+  },
+  "required": [
+    "title",
+    "content"
+  ]
+}
